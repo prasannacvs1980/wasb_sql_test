@@ -44,4 +44,4 @@ INSERT INTO INVOICE (
                       select supplier_id,invoice_amount,
                       last_day_of_month(DATE_ADD('month',DUE_DATE,CURRENT_DATE)) AS DUE_DATE
                       FROM INVOICES_DUE ID INNER JOIN SUPPLIER S ON ID.COMPANY_NAME = S.NAME
-                     ) ;
+                     );
