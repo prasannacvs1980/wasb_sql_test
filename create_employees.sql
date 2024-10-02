@@ -1,10 +1,13 @@
-CREATE TABLE IF NOT EXISTS MEMORY.DEFAULT.EMPLOYEE (
-    employee_id tinyint,
-    first_name varchar,
-    last_name varchar,
-    job_title varchar,
-    manager_id tinyint);
+USE MEMORY.DEFAULT;
 
+CREATE TABLE IF NOT EXISTS EMPLOYEE (
+                                      employee_id tinyint,
+                                      first_name varchar,
+                                      last_name varchar,
+                                      job_title varchar,
+                                      manager_id tinyint);
+
+TRUNCATE TABLE EMPLOYEE;
 
  INSERT INTO MEMORY.DEFAULT.EMPLOYEE VALUES (1, 'Ian','James','CEO',4),
                                             (2,'Umberto','Torrielli','CSO',1),
@@ -17,3 +20,4 @@ CREATE TABLE IF NOT EXISTS MEMORY.DEFAULT.EMPLOYEE (
                                             (9,'Andrea','Ghibaudi','MD NAM',2);
 
 
+SELECT * FROM EMPLOYEE;
